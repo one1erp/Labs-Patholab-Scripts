@@ -1,0 +1,9 @@
+        MacabiShared.FindPhysicianDlg dlg_p = new MacabiShared.FindPhysicianDlg();
+          var       cnStr = "Provider=OraOLEDB.Oracle;Data Source=PATHOLAB;User ID=lims_sys;Password=lims_sys";
+            var con = new ADODB.Connection();
+              con.ConnectionString = cnStr;
+                con.Open();
+            dlg_p.Con =con;
+            
+            dlg_p.ShowDlg();
+            var id = dlg_p.SupplierID;
